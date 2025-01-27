@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm-to-Table Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stage {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding: 1rem;
+        }
+
+        .stage:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 4px;
+            width: 100%;
+            background-color: #d1d1d1;
+            transform: translateY(-50%);
+        }
+
+        .icon {
+            background-color: #e8e8e8;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 1rem;
+        }
+
+        .icon img {
+            width: 50%;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: #333333;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #555555;
+        }
+
+        .cta {
+            margin-top: 1rem;
+            background-color: #88c091;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta:hover {
+            background-color: #75a57f;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="stage">
+            <div class="icon">
+                <img src="farm-icon.svg" alt="Farm">
+            </div>
+            <div class="title">Farm</div>
+            <div class="description">Where it all begins with fresh produce.</div>
+            <button class="cta">Learn More</button>
+        </div>
+
+        <div class="stage">
+            <div class="icon">
+                <img src="transport-icon.svg" alt="Transport">
+            </div>
+            <div class="title">Transport</div>
+            <div class="description">Efficient delivery to markets and fridges.</div>
+            <button class="cta">Learn More</button>
+        </div>
+
+        <div class="stage">
+            <div class="icon">
+                <img src="storage-icon.svg" alt="Storage">
+            </div>
+            <div class="title">Storage</div>
+            <div class="description">Ensuring freshness for your consumption.</div>
+            <button class="cta">Learn More</button>
+        </div>
+
+        <div class="stage">
+            <div class="icon">
+                <img src="market-icon.svg" alt="Market">
+            </div>
+            <div class="title">Market</div>
+            <div class="description">Bringing farm-fresh products to you.</div>
+            <button class="cta">Join Us</button>
+        </div>
+    </div>
+</body>
+</html>
