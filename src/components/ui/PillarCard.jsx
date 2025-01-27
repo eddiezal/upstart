@@ -16,5 +16,6 @@ const PillarCard = ({ icon, title, description }) => {
     );
   };
   
+  
 export default PillarCard;
 
