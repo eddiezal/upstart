@@ -1,21 +1,24 @@
 import React from 'react';
-
-const PillarCard = ({ icon, title, description }) => {
+import Icons from '../../assets/icons/icons'; // Adjust the relative path as necessary
+    
+const PillarCard = ({ iconName, title, description, backgroundClass }) => {
+    const icon = Icons[iconName];
     return (
-      <div className="bg-cream p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-        <div className="flex justify-center mb-4">
-          <img src={icon} alt={title} className="w-12 h-12" />
-        </div>
-        <h3 className="text-forest-green font-playfair font-bold text-xl tracking-wide text-center">
-          {title}
-        </h3>
-        <p className="text-warm-sand font-roboto text-bodyRegular mt-4 text-center">
-          {description}
-        </p>
+      <div
+        className={`shadow-lg rounded-xl p-6`}
+        style={{
+          backgroundColor: 'var(--tw-bg-opacity)',
+          backgroundImage: `url(/src/assets/icons/${iconName}.svg)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: '60px',
+        }}
+      >
+        <img src={icon} alt={title} className="h-16 mx-auto mb-4" />
+        <h3 className="text-h3 font-playfair text-forest-green">{title}</h3>
+        <p className="text-bodyRegular text-warm-sand mt-2">{description}</p>
       </div>
     );
   };
   
-  
 export default PillarCard;
-
