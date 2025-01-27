@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'], // Ensure all relevant files are included
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
       colors: {
@@ -24,14 +24,19 @@ module.exports = {
         caption: ['14px', '1.4'],
         meta: ['12px', '1.3'],
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            color: '#729C72', // Default text color
-            h1: { fontFamily: 'playfair', fontWeight: 'bold' },
-            body: { fontFamily: 'roboto' },
-          },
-        },
+      backgroundImage: {
+        'sustainability': "url('/src/assets/icons/leaf.svg')",
+        'community': "url('/src/assets/icons/community.svg')",
+        'innovation': "url('/src/assets/icons/innovation.svg')",
+      },
+      backgroundSize: {
+        '50%': '50%',
+        '75%': '75%',
+        'full': '100%',
+      },
+      backgroundPosition: {
+        'center-top': 'center top',
+        'center-center': 'center center',
       },
       spacing: {
         '72': '18rem',
