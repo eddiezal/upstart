@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add custom base styles (e.g., fonts) */
+@layer base {
+  body {
+    @apply bg-gray-50; /* Light background for sustainability aesthetic */
+  }
+}
+
+/* Optional: Add custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
