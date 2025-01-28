@@ -15,3 +15,30 @@
     text-wrap: balance;
   }
 }
+
+/* Add styling for WordSwap text */
+.word-swap {
+  text-align: center;
+  color: #F7B267; /* Golden Apricot for static text */
+}
+
+.word-swap .animated {
+  color: #C9E4CA; /* Mint Green for animated phrases */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out effect */
+}
+
+.word-swap .animated-enter {
+  opacity: 0;
+}
+
+.word-swap .animated-enter-active {
+  opacity: 1;
+}
+
+.word-swap .animated-exit {
+  opacity: 1;
+}
+
+.word-swap .animated-exit-active {
+  opacity: 0;
+}
