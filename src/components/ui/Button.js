@@ -1,8 +1,22 @@
 import React from 'react';
 
 const Button = ({ children, onClick, className }) => {
+  const handleClick = (e) => {
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+    ripple.style.left = `${e.clientX - e.target.offsetLeft}px`;
+    ripple.style.top = `${e.clientY - e.target.offsetTop}px`;
+    e.target.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+
+    if (onClick) onClick(e);
+  };
+
   return (
-    <button className={`px-4 py-2 bg-blue-600 text-white rounded cta-button ${className}`} onClick={onClick}>
+    <button className={`px-4 py-2 bg-blue-600 text-white rounded cta-button ${className}`} onClick={handleClick}>
       {children}
     </button>
   );
