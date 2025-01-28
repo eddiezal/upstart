@@ -1,28 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-const WordSwap = ({ phrases }) => {
+const WordSwap = React.memo(({ phrases }) => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [fade, setFade] = useState(true);
+
+  const memoizedPhrases = useMemo(() => phrases, [phrases]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
-        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % memoizedPhrases.length);
         setFade(true);
-      }, 500);
-    }, 3000);
+      }, 300);
+    }, 2000);
 
     return () => clearInterval(interval);
-  }, [phrases]);
+  }, [memoizedPhrases]);
 
   return (
     <div className={`word-swap ${fade ? 'opacity-100' : 'opacity-0'} mt-4`}>
-      <span className="text-[#C9E4CA]">{phrases[currentPhraseIndex]}</span>
+      <span className="text-[#C9E4CA]">{memoizedPhrases[currentPhraseIndex]}</span>
     </div>
   );
-};
+});
 
 WordSwap.propTypes = {
   phrases: PropTypes.arrayOf(PropTypes.string),
