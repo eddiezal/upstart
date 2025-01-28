@@ -1,3 +1,5 @@
-export { default as Navbar } from './Navbar';
+// Remove Button import and fix Navbar export
+export { default as Navbar } from './Navbar';  // Ensure case matches
 export { default as Footer } from './Footer';
-export { default as ScrollIndicator } from './ScrollIndicator';
+// src/components/ui/index.js
+export { default as Button } from '../ui/Button';

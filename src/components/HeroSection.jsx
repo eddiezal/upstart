@@ -6,7 +6,7 @@ import Button from './ui/Button';
 
 const HeroSection = ({ title, subtitle, phrases }) => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen hero-section text-center">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center px-6">
       <h1 className="text-4xl font-bold text-[#F7B267]">{title}</h1>
       <p className="text-2xl text-[#F7B267] mt-4">{subtitle}</p>
       <WordSwap phrases={phrases} />
