@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './WordSwap.css';
 
+
 const phrases = [
   "Farms to Families.",
   "Community-Centered Growth.",
@@ -25,8 +26,8 @@ const WordSwap = () => {
   }, []);
 
   return (
-    <div className="word-swap">
-      <span className="word-swap-text">{phrases[index]}</span>
+    <div className="text-center">
+      <span className="text-xl font-bold">{phrases[index]}</span>
     </div>
   );
 };

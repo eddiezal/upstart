@@ -26,8 +26,8 @@ module.exports = {
       },
       backgroundImage: {
         'sustainability': "url('/src/assets/icons/leaf.svg')",
-        'community': "url('/src/assets/icons/community.svg')",
-        'innovation': "url('/src/assets/icons/innovation.svg')",
+        'community': "url('/src/assets/icons/handshake.svg')",
+        'innovation': "url('/src/assets/icons/rocket.svg')",
       },
       backgroundSize: {
         '50%': '50%',
