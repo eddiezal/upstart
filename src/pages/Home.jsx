@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import phrases from '../constants/phrases';
+import ImpactMetrics from '../components/ImpactMetrics';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         subtitle="Reducing waste, nurturing communities"
         phrases={phrases}
       />
+      <ImpactMetrics />
     </div>
   );
 }
