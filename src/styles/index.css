@@ -15,3 +15,10 @@
     text-wrap: balance;
   }
 }
+
+/* Add custom styles for WordSwap animations */
+@layer components {
+  .word-swap {
+    @apply text-[#C9E4CA] transition-opacity duration-1000 ease-in-out;
+  }
+}
