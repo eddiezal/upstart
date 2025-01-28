@@ -10,4 +10,6 @@ const phrases = [
   "Live for Tomorrow."
 ];
 
+// Add new phrases to the `phrases` array here
+
 export default phrases;
