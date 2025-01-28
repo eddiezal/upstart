@@ -22,3 +22,29 @@
     @apply text-[#C9E4CA] transition-opacity duration-1000 ease-in-out;
   }
 }
+
+/* Add custom styles for the CTA button */
+@layer components {
+  .cta-button {
+    @apply px-4 py-2 bg-blue-600 text-white rounded;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cta-button:hover {
+    box-shadow: 0 0 10px 2px #F7B267;
+    transform: scale(1.05);
+  }
+
+  .cta-button:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Add custom styles for the Hero Section background */
+@layer components {
+  .hero-section {
+    background: linear-gradient(135deg, #C9E4CA, #F9D8A3);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
