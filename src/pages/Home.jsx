@@ -1,10 +1,15 @@
-// src/pages/Home.jsx
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import phrases from '../constants/phrases';
+
 export default function Home() {
-    return (
-      <div className="p-8">
-        <h1 className="text-3xl font-bold text-green-600">
-          Tailwind CSS is working!
-        </h1>
-      </div>
-    );
-  }
+  return (
+    <div className="p-8">
+      <HeroSection
+        title="Welcome to Upstart Fridge"
+        subtitle="Reducing waste, nurturing communities"
+        phrases={phrases}
+      />
+    </div>
+  );
+}
