@@ -1,10 +1,9 @@
-// src/pages/Home.jsx
+import HeroSection from '../components/layout/HeroSection';
+
 export default function Home() {
     return (
       <div className="p-8">
-        <h1 className="text-3xl font-bold text-green-600">
-          Tailwind CSS is working!
-        </h1>
+        <HeroSection />
       </div>
     );
   }
