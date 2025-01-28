@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Farmers Connected",
+    "value": "50+",
+    "icon": "leaf",
+    "description": "Local farmers brought into our ecosystem for a greener future."
+  },
+  {
+    "id": 2,
+    "title": "CO2 Saved",
+    "value": "20,000+ lbs",
+    "icon": "cloud",
+    "description": "Equivalent to reducing 50 cars’ annual emissions."
+  },
+  {
+    "id": 3,
+    "title": "Products Delivered",
+    "value": "1,500+",
+    "icon": "basket",
+    "description": "Delivering fresh, local produce to families across San Diego."
+  }
+]
