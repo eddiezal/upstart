@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WordSwap from './WordSwap';
 import phrases from '../constants/phrases';
+import Button from './ui/Button';
 
 const HeroSection = ({ title, subtitle, phrases }) => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center">
+    <section className="flex flex-col items-center justify-center min-h-screen hero-section text-center">
       <h1 className="text-4xl font-bold text-[#F7B267]">{title}</h1>
       <p className="text-2xl text-[#F7B267] mt-4">{subtitle}</p>
       <WordSwap phrases={phrases} />
+      <Button className="mt-8">Join the Movement</Button>
     </section>
   );
 };

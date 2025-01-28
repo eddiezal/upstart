@@ -3,18 +3,23 @@ import PropTypes from 'prop-types';
 
 const WordSwap = ({ phrases }) => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+      setFade(false);
+      setTimeout(() => {
+        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+        setFade(true);
+      }, 500);
     }, 3000);
 
     return () => clearInterval(interval);
   }, [phrases]);
 
   return (
-    <div className="text-[#C9E4CA] mt-4">
-      {phrases[currentPhraseIndex]}
+    <div className={`word-swap ${fade ? 'opacity-100' : 'opacity-0'} mt-4`}>
+      <span className="text-[#C9E4CA]">{phrases[currentPhraseIndex]}</span>
     </div>
   );
 };
