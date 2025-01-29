@@ -28,27 +28,27 @@ const RegionalImpact = () => {
         </div>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="flex flex-col items-center">
-            <img src={farmIcon} alt="Farm Icon" className="h-16 w-16" aria-label="Farm Icon" />
+            <img src={farmIcon} alt="Farm Icon" className="h-16 w-16 max-w-80 max-h-80 hover:transform hover:translateY(-4px) hover:shadow-md hover:shadow-gray-500" aria-label="Farm Icon" />
             <p className="mt-2 text-center text-gray-700">Represents local farmers & sustainable sourcing.</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={marketStandIcon} alt="Market Stand Icon" className="h-16 w-16" aria-label="Market Stand Icon" />
+            <img src={marketStandIcon} alt="Market Stand Icon" className="h-16 w-16 max-w-80 max-h-80 hover:transform hover:translateY(-4px) hover:shadow-md hover:shadow-gray-500" aria-label="Market Stand Icon" />
             <p className="mt-2 text-center text-gray-700">Symbolizes farmers' markets & small businesses.</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={communityIcon} alt="Community Icon" className="h-16 w-16" aria-label="Community Icon" />
+            <img src={communityIcon} alt="Community Icon" className="h-16 w-16 max-w-80 max-h-80 hover:transform hover:translateY(-4px) hover:shadow-md hover:shadow-gray-500" aria-label="Community Icon" />
             <p className="mt-2 text-center text-gray-700">Represents partnerships & community-building.</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={sustainabilityIcon} alt="Sustainability Icon" className="h-16 w-16" aria-label="Sustainability Icon" />
+            <img src={sustainabilityIcon} alt="Sustainability Icon" className="h-16 w-16 max-w-80 max-h-80 hover:transform hover:translateY(-4px) hover:shadow-md hover:shadow-gray-500" aria-label="Sustainability Icon" />
             <p className="mt-2 text-center text-gray-700">Highlights eco-friendly food systems.</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={foodDistributionIcon} alt="Food Distribution Icon" className="h-16 w-16" aria-label="Food Distribution Icon" />
+            <img src={foodDistributionIcon} alt="Food Distribution Icon" className="h-16 w-16 max-w-80 max-h-80 hover:transform hover:translateY(-4px) hover:shadow-md hover:shadow-gray-500" aria-label="Food Distribution Icon" />
             <p className="mt-2 text-center text-gray-700">Represents logistics & accessibility.</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src={innovationIcon} alt="Innovation Icon" className="h-16 w-16" aria-label="Innovation Icon" />
+            <img src={innovationIcon} alt="Innovation Icon" className="h-16 w-16 max-w-80 max-h-80 hover:transform hover:translateY(-4px) hover:shadow-md hover:shadow-gray-500" aria-label="Innovation Icon" />
             <p className="mt-2 text-center text-gray-700">Symbolizes Upstart’s impact-driven approach.</p>
           </div>
         </div>

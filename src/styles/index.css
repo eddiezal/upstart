@@ -313,3 +313,38 @@
     color: var(--hover-color);
   }
 }
+
+/* Adjust icon spacing & typography hierarchy */
+@layer components {
+  .icon-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .icon {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .title {
+    margin-top: 0.75rem;
+  }
+
+  .description {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Ensure CTA visibility & interactivity */
+@layer components {
+  .cta-link {
+    font-size: 1rem; /* text-base */
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .cta-link:hover {
+    color: #E09E60; /* Deep Sand */
+    border-color: #F7B267; /* Apricot */
+  }
+}
