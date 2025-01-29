@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HeroSection from '../components/HeroSection';
 import phrases from '../constants/phrases';
-import PillarCards from '../components/PillarCards';
+import PillarCard from '../components/ui/PillarCard';
 import sustainability from '../components/assets/icons/sustainability.svg';
 import community from '../components/assets/icons/community.svg';
 import innovation from '../components/assets/icons/innovation.svg';
@@ -42,20 +42,20 @@ export default function Home() {
         phrases={phrases}
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-        <PillarCards
+        <PillarCard
+          iconName="sustainability"
           title="Sustainability"
           description="Promoting eco-friendly farming and sustainable practices."
-          icon={sustainability}
         />
-        <PillarCards
+        <PillarCard
+          iconName="community"
           title="Community"
           description="Building strong, collaborative communities through shared resources."
-          icon={community}
         />
-        <PillarCards
+        <PillarCard
+          iconName="innovation"
           title="Innovation"
           description="Driving innovation with cutting-edge technology and ideas."
-          icon={innovation}
         />
       </div>
       <div className="section" data-section="Cultivators">
