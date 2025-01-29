@@ -443,3 +443,84 @@
     transition: background 0.5s ease-in-out;
   }
 }
+
+/* Add custom styles for entrance animations, hover effects, and dynamic text changes for buttons */
+@layer components {
+  .button-entrance {
+    @apply opacity-0 translate-y-4;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+
+  .button-hover {
+    @apply transform transition-transform duration-300 ease-in-out shadow-lg ring-2 ring-transparent;
+  }
+
+  .button-hover:hover {
+    @apply scale-105 ring-opacity-100;
+  }
+
+  .dynamic-text {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+
+  .dynamic-text-hidden {
+    @apply opacity-0;
+  }
+
+  .dynamic-text-visible {
+    @apply opacity-100;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Modify background gradient to feature subtle motion effects and apply Glassmorphism */
+@layer components {
+  .bg-gradient-motion {
+    background: linear-gradient(135deg, #C9E4CA, #88C091);
+    background-size: 200% 200%;
+    animation: gradientMotion 5s ease infinite;
+  }
+
+  .glassmorphism {
+    @apply backdrop-blur-xl bg-opacity-60;
+  }
+
+  @keyframes gradientMotion {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+/* Ensure mobile responsiveness and performance optimization for animations */
+@layer components {
+  .mobile-optimized {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .mobile-optimized:hover {
+    @apply transform-none;
+  }
+
+  @media (max-width: 768px) {
+    .hover\:scale-105:hover {
+      @apply transform-none;
+    }
+  }
+}
