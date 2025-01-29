@@ -4,6 +4,7 @@ import Icons from '../../assets/icons/icons';
 
 const PillarCard = ({ iconName, title, description }) => {
   const [activeRole, setActiveRole] = useState('Cultivator');
+  const [showTooltip, setShowTooltip] = useState(false);
   const icon = Icons[iconName];
 
   if (!icon) {
@@ -47,8 +48,15 @@ const PillarCard = ({ iconName, title, description }) => {
               activeRole === role ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
             }`}
             onClick={() => setActiveRole(role)}
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
           >
             {roles[role].title}
+            {showTooltip && (
+              <div className="tooltip bg-gray-700 text-white p-2 rounded shadow-lg">
+                {roles[role].description}
+              </div>
+            )}
           </button>
         ))}
       </div>

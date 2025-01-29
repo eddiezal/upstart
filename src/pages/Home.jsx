@@ -12,6 +12,7 @@ import FinalCTA from '../components/FinalCTA';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('Cultivators');
+  const [progress, setProgress] = useState(0);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('.section');
@@ -25,6 +26,10 @@ export default function Home() {
         setCurrentSection(section.getAttribute('data-section'));
       }
     });
+
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = (window.scrollY / totalHeight) * 100;
+    setProgress(scrollProgress);
   };
 
   useEffect(() => {
@@ -76,6 +81,9 @@ export default function Home() {
       <FinalCTA />
       <FloatingCTAButton currentSection={currentSection} />
       <RegionalImpact />
+      <div className="scroll-indicator">
+        <div className="scroll-indicator-progress" style={{ width: `${progress}%` }}></div>
+      </div>
     </div>
   );
 }
