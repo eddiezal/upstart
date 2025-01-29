@@ -17,7 +17,7 @@ const Button = ({ children, onClick, className, ariaLabel }) => {
 
   return (
     <button
-      className={`px-4 py-2 bg-blue-600 text-white rounded cta-button ${className}`}
+      className={`px-4 py-2 bg-[#F7B267] text-white rounded cta-button ${className}`}
       onClick={handleClick}
       aria-label={ariaLabel}
       tabIndex="0"
