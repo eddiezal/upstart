@@ -5,6 +5,7 @@ import PillarCards from '../components/PillarCards';
 import sustainability from '../components/assets/icons/sustainability.svg';
 import community from '../components/assets/icons/community.svg';
 import innovation from '../components/assets/icons/innovation.svg';
+import RegionalImpact from '../components/RegionalImpact';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
           icon={innovation}  // Fixed reference
         />
       </div>
+      <RegionalImpact />
     </div>
   );
 }
