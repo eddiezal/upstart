@@ -38,6 +38,11 @@
   .cta-button:active {
     transform: scale(0.95);
   }
+
+  .cta-button:focus {
+    outline: 2px solid #F7B267;
+    outline-offset: 2px;
+  }
 }
 
 /* Add custom styles for the Hero Section background */
@@ -46,6 +51,11 @@
     background: linear-gradient(135deg, #C9E4CA, #F9D8A3);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .hero-section h1,
+  .hero-section p {
+    color: #000000; /* Ensure sufficient contrast */
   }
 }
 
@@ -123,5 +133,88 @@
     height: 100%;
     background: #F7B267;
     transition: width 0.2s ease-out;
+  }
+}
+
+/* Add styles for Pillar Cards hover effects and animations */
+@layer components {
+  .pillar-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .pillar-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .icon-container .icon {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .icon-container .icon:hover {
+    transform: rotate(10deg) scale(1.1);
+    filter: drop-shadow(0 0 5px #F7B267);
+  }
+
+  .cta-link {
+    color: #F9D8A3;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
+
+  .cta-link:hover {
+    color: #F7B267;
+    text-decoration: underline;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease-in-out;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Add styles for background textures and patterns */
+@layer components {
+  .bg-sustainability {
+    background-image: url('/path/to/leafy-texture.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bg-community {
+    background-image: url('/path/to/woven-pattern.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bg-innovation {
+    background-image: url('/path/to/abstract-lines.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Add styles for color gradients in card backgrounds */
+@layer components {
+  .bg-gradient-sustainability {
+    background: linear-gradient(135deg, #C9E4CA, #FAF3E0);
+  }
+
+  .bg-gradient-community {
+    background: linear-gradient(135deg, #F7B267, #EFE8D8);
+  }
+
+  .bg-gradient-innovation {
+    background: linear-gradient(135deg, #F9D8A3, #C9E4CA);
   }
 }

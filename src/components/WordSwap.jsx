@@ -18,7 +18,7 @@ const WordSwap = ({ phrases }) => {
   }, [phrases]);
 
   return (
-    <div className={`word-swap ${fade ? 'opacity-100' : 'opacity-0'} mt-4`}>
+    <div className={`word-swap ${fade ? 'opacity-100' : 'opacity-0'} mt-4`} aria-live="polite">
       <span className="text-[#C9E4CA]">{phrases[currentPhraseIndex]}</span>
     </div>
   );
