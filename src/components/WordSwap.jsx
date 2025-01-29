@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
 const WordSwap = ({ phrases }) => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -18,9 +19,16 @@ const WordSwap = ({ phrases }) => {
   }, [phrases]);
 
   return (
-    <div className={`word-swap ${fade ? 'opacity-100' : 'opacity-0'} mt-4`} aria-live="polite">
+    <motion.div
+      className={`word-swap ${fade ? 'opacity-100' : 'opacity-0'} mt-4`}
+      aria-live="polite"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <span className="text-[#C9E4CA]">{phrases[currentPhraseIndex]}</span>
-    </div>
+    </motion.div>
   );
 };
 

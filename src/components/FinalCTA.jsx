@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const roleData = {
@@ -30,6 +30,7 @@ const roleData = {
 
 const FinalCTA = () => {
   const [hoveredRole, setHoveredRole] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const history = useHistory();
 
   const handleMouseEnter = (role) => {
@@ -44,6 +45,18 @@ const FinalCTA = () => {
     history.push(roleData[role].clickAction);
   };
 
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="final-cta text-center py-12 bg-gradient-to-r from-green-400 to-blue-500 text-white backdrop-blur-xl bg-opacity-60">
       <h2 className="text-3xl font-bold mb-4">Be Part of the Future of Food</h2>
@@ -56,6 +69,10 @@ const FinalCTA = () => {
             onMouseEnter={() => handleMouseEnter(role)}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleClick(role)}
+            style={{
+              transform: `translateY(${scrollPosition * 0.1}px)`,
+              transition: 'transform 0.5s ease-out',
+            }}
           >
             <p className="text-lg">
               {hoveredRole === role ? roleData[role].hoverText : roleData[role].defaultText}
