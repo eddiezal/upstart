@@ -218,3 +218,98 @@
     background: linear-gradient(135deg, #F9D8A3, #C9E4CA);
   }
 }
+
+/* Define the gradient effect for the brand text */
+@layer components {
+  .brand-gradient {
+    background: linear-gradient(to right, #F7B267, #88C091);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Add custom styles for the CTA button */
+@layer components {
+  .cta-button {
+    @apply px-4 py-2 bg-[#F7B267] text-white rounded;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cta-button:hover {
+    box-shadow: 0 0 10px 2px #F7B267;
+    transform: scale(1.05);
+  }
+
+  .cta-button:active {
+    transform: scale(0.95);
+  }
+
+  .cta-button:focus {
+    outline: 2px solid #F7B267;
+    outline-offset: 2px;
+  }
+}
+
+/* Add styles for the hamburger menu and its dropdown */
+@layer components {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hamburger-menu.open {
+    display: block;
+  }
+
+  .hamburger-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* Ensure dark mode compatibility by defining color schemes */
+@layer components {
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: #E0E0E0;
+    --primary-accent: #F7B267;
+    --secondary-accent: #C9E4CA;
+    --border-color: #2C2C2C;
+    --hover-color: #F9D8A3;
+  }
+
+  .dark-mode body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .dark-mode .cta-button {
+    background-color: var(--primary-accent);
+  }
+
+  .dark-mode .cta-button:hover {
+    background-color: var(--hover-color);
+  }
+
+  .dark-mode .navbar {
+    background-color: var(--bg-color);
+  }
+
+  .dark-mode .navbar a {
+    color: var(--text-color);
+  }
+
+  .dark-mode .navbar a:hover {
+    color: var(--hover-color);
+  }
+}
