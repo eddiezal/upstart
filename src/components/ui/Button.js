@@ -26,6 +26,7 @@ const Button = ({ children, onClick, className, ariaLabel }) => {
           handleClick(e);
         }
       }}
+      style={{ willChange: 'transform, opacity' }}
     >
       {children}
     </button>
