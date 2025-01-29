@@ -38,6 +38,11 @@
   .cta-button:active {
     transform: scale(0.95);
   }
+
+  .cta-button:focus {
+    outline: 2px solid #F7B267;
+    outline-offset: 2px;
+  }
 }
 
 /* Add custom styles for the Hero Section background */
@@ -46,6 +51,11 @@
     background: linear-gradient(135deg, #C9E4CA, #F9D8A3);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .hero-section h1,
+  .hero-section p {
+    color: #000000; /* Ensure sufficient contrast */
   }
 }
 
